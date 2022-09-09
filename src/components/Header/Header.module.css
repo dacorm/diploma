@@ -4,7 +4,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 78px;
 }
 
 .logo {
@@ -15,6 +14,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
 }
 
 .list {
@@ -22,9 +24,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 30px;
 }
 
 .person {
     width: 20px;
     height: 20px;
+    justify-self: flex-end;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+.listLink {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }

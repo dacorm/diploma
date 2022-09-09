@@ -1,12 +1,13 @@
 import React from 'react';
 import Header from "./components/Header/Header";
 import './index.css'
+import Search from "./components/Search/Search";
 
 function App() {
   return (
     <div className="page">
         <Header />
-      <h1>Hello</h1>
+        <Search />
     </div>
   );
 }

@@ -1,0 +1,146 @@
+.inputContainer {
+    padding-top: 98px;
+    display: flex;
+    align-items: center;
+}
+
+.searchInput {
+    width: 100%;
+    border-radius: 9px;
+    height: 72px;
+    background: #F9F9F9;
+    border: none;
+    outline: none;
+    padding-left: 45px;
+}
+
+.searchInput::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #A0A0A0;
+}
+
+.buttonContainer {
+    height: 72px;
+    background: #F9F9F9;
+    border: none;
+    outline: none;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 29px;
+}
+
+.checkboxContainer {
+    width: 120px;
+    height: 29px;
+    background: #F9F9F9;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid gray;
+    padding-left: 29px;
+}
+
+.button {
+    width: 80px;
+    height: 34px;
+    border-radius: 20px;
+    background-color: #FF6838;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchIcon {
+    width: 22px;
+    height: 22px;
+}
+
+.checkboxIos {
+    display: flex;
+    align-items: center;
+    height: 28px;
+    line-height: 28px;
+    margin-right: 10px;
+    position: relative;
+    vertical-align: middle;
+    font-size: 14px;
+    user-select: none;
+}
+.checkboxIos .checkboxIosSwitch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 36px;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 25%/50%;
+    vertical-align: top;
+    background: #eee;
+    transition: .2s;
+}
+.checkboxIos .checkboxIosSwitch:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    transition: .15s;
+}
+.checkboxIos input[type=checkbox] {
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.checkboxIos input[type=checkbox]:not(:disabled):active + .checkboxIosSwitch:before {
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, .3);
+}
+.checkboxIos input[type=checkbox]:checked + .checkboxIosSwitch {
+    background: limegreen;
+}
+.checkboxIos input[type=checkbox]:checked + .checkboxIosSwitch:before {
+    transform:translateX(18px);
+}
+
+/* Hover */
+.checkboxIos input[type="checkbox"]:not(:disabled) + .checkboxIosSwitch {
+    cursor: pointer;
+    border-color: rgba(0, 0, 0, .3);
+}
+
+/* Disabled */
+.checkboxIos input[type=checkbox]:disabled + .checkboxIosSwitch {
+    filter: grayscale(70%);
+    border-color: rgba(0, 0, 0, .1);
+}
+.checkboxIos input[type=checkbox]:disabled + .checkboxIosSwitch:before {
+    background: #eee;
+}
+
+/* Focus */
+.checkboxIos.focused .checkboxIosSwitch:before {
+    box-shadow: inset 0px 0px 4px #ff5623;
+}
+
+.checkboxText {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+}
