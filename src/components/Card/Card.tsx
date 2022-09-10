@@ -3,19 +3,22 @@ import styles from './Card.module.css';
 
 type cardProps = {
     name: string
-    nameEng: string
     duration: number
     img: string
 }
 
-const Card: React.FC<cardProps> = ({ name, duration, img, nameEng }) => {
+const Card: React.FC<cardProps> = ({ name, duration, img }) => {
     const [isLiked, setIsLiked] = useState(false);
 
     const durationConverter = (duration: number) => {
         const hours = Math.floor(duration / 60);
         const minutes = duration % 60;
-
-        const time = `${hours}ч ${minutes}м`
+        let time
+        if (hours > 0) {
+            time = `${hours}ч ${minutes}м`
+        } else {
+            time = `${minutes}м`
+        }
 
         return time
     }
@@ -27,10 +30,7 @@ const Card: React.FC<cardProps> = ({ name, duration, img, nameEng }) => {
                 <p className={styles.movieLength}>{durationConverter(duration)}</p>
                 <div className={isLiked ? `${styles.like} ${styles.likeActive}` : `${styles.like}`} onClick={() => setIsLiked(!isLiked)}/>
             </div>
-            <iframe src={`${img}`}
-                    title={nameEng}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen className={styles.image} />
+            <img src={`https://api.nomoreparties.co${img}`} alt={name} className={styles.image}/>
         </div>
     );
 };
