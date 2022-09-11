@@ -3,6 +3,8 @@
     display: flex;
     align-items: center;
     padding-bottom: 70px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .searchInput {
@@ -36,7 +38,6 @@
 }
 
 .checkboxContainer {
-    width: 120px;
     height: 72px;
     background: #F9F9F9;
     border: none;
@@ -46,6 +47,12 @@
     justify-content: center;
     border-left: 1px solid gray;
     padding-left: 29px;
+}
+
+@media screen and (max-width: 767px) {
+    .checkboxContainer {
+        display: none;
+    }
 }
 
 .button {

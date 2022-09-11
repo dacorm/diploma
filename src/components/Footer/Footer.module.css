@@ -8,6 +8,13 @@
     border-top: 1px solid gray;
 }
 
+@media screen and (max-width: 1279px) {
+    .footer {
+        width: calc(100% - 142px);
+
+    }
+}
+
 .link {
     font-style: normal;
     font-weight: 400;

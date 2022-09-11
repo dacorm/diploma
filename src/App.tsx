@@ -5,7 +5,6 @@ import Search from "./components/Search/Search";
 import Card from "./components/Card/Card";
 import {moviesJSON} from "./@types/movies";
 import axios from "axios";
-import Button from "./components/Button/Button";
 import Footer from "./components/Footer/Footer";
 import smallFilmsToggle from "./store/smallFilmsToggle";
 import {observer} from "mobx-react-lite";
